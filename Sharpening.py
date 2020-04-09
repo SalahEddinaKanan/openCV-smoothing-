@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 img = cv2.imread('Lenna noisy.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-kernel = np.ones((5, 5), np.float32)/25
+kernel = np.ones((5, 5), np.float32)/25 #5x5 = 25 = kernel size [1 1 1 1 1, 1 1 1 1 1, 1 1 1 1 1, 1 1 1 1 1, 1 1 1 1 1 ]
 dst = cv2.filter2D(img, -1, kernel)
 blur = cv2.blur(img, (5, 5))
 gblur = cv2.GaussianBlur(img, (5, 5), 0)
